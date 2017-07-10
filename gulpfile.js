@@ -14,8 +14,8 @@ var reload       = browserSync.reload;
 var paths = {
   html:['./*.php'],
   css:['./src/*.css'],
-  script:['./js/*.js'],
-  images:['src/images/*']
+  script:['./assets/js/*.js'],
+  images:['./src/images/*']
 };
 postcss([
   cssnext({
@@ -70,7 +70,7 @@ gulp.task('images', function(){
       ],
       {verbose:true})
     )
-    .pipe(gulp.dest('img'))
+    .pipe(gulp.dest('/assets/img'))
     .pipe(reload({stream:true}));
 });
 
