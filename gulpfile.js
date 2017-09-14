@@ -6,6 +6,7 @@ var precss       = require('precss');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 
+var url = "";
 
 // ////////////////////////////////////////////////
 // Пути к исходным файлам
@@ -48,7 +49,7 @@ gulp.task('html', function(){
 // // /////////////////////////////////////////////
 gulp.task('browserSync', function() {
   browserSync({
-    proxy: "gulp-starter-project"
+    proxy: url
   });
 });
 
